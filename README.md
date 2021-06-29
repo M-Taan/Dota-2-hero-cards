@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Dota 2 Hero Cards Using OpenDota API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Using Axios I fetched hero stats from the OpenDota API.
+
+Each hero have his image displayed as a card.
+
+When hovering over it, the card will flip, displaying hero-related data, such as: The hero roles, Immortal (highest ranking bracket) winrate, professional winrates and the bans in professional matches.
 
 ## Available Scripts
 
