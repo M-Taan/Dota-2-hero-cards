@@ -1,6 +1,7 @@
 import Hero from "./Hero";
+import Spinner from "../Spinner";
 
-const Heroes = ({ heroes, query }) => {
+const Heroes = ({ heroes, query, loadingStatus }) => {
   // Display heroes via the Hero component
   const displayHeroes = (hero) => {
     return hero.id !== 135 && <Hero hero={hero} key={hero.id} />;
@@ -23,7 +24,11 @@ const Heroes = ({ heroes, query }) => {
     heroes.map((hero) => {
       return queryHeroes(hero, query);
     });
-  return <section className="cards">{getHeroImg(query)}</section>;
+  return loadingStatus ? (
+    <Spinner />
+  ) : (
+    <section className="cards">{getHeroImg(query)}</section>
+  );
 };
 
 export default Heroes;
